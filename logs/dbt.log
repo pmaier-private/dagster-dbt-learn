@@ -1,0 +1,95 @@
+[0m16:55:24.882018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b867f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bd712e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf12150>]}
+
+
+============================== 16:55:24.896854 | 5ba14d52-576f-4f81-a4bf-ab4d2d4cd350 ==============================
+[0m16:55:24.896854 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:55:24.897093 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'printer_width': '80', 'profiles_dir': '/Users/paulmaier/.dbt', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'invocation_command': 'dbt init dbt_lab', 'partial_parse': 'True', 'use_colors': 'True', 'quiet': 'False', 'empty': 'None', 'debug': 'False', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'write_json': 'True', 'cache_selected_only': 'False', 'no_print': 'None', 'log_cache_events': 'False', 'version_check': 'True', 'warn_error': 'None'}
+[0m16:55:24.921881 [info ] [MainThread]: Creating dbt configuration folder at /Users/paulmaier/.dbt
+[0m16:55:24.922975 [debug] [MainThread]: Starter project path: /Users/paulmaier/projects/dagster-dbt-learn/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m16:55:24.925868 [info ] [MainThread]: 
+Your new dbt project "dbt_lab" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:55:24.926019 [info ] [MainThread]: Setting up your profile.
+[0m16:56:40.451995 [info ] [MainThread]: Profile dbt_lab written to /Users/paulmaier/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:56:40.453200 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 75.60487, "process_in_blocks": "0", "process_kernel_time": 0.117994, "process_mem_max_rss": "136183808", "process_out_blocks": "0", "process_user_time": 0.590901}
+[0m16:56:40.453845 [debug] [MainThread]: Command `dbt init` succeeded at 16:56:40.453720 after 75.61 seconds
+[0m16:56:40.454290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b203bf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b1d8ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b1d8b60>]}
+[0m16:56:40.454747 [debug] [MainThread]: Flushing usage events
+[0m16:56:40.969166 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:56:52.646909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109467260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097c25a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097c2180>]}
+
+
+============================== 16:56:52.648584 | fa035c7d-97b2-4f91-8338-f783a28912fc ==============================
+[0m16:56:52.648584 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:56:52.648822 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'partial_parse': 'True', 'target_path': 'None', 'quiet': 'False', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'debug': 'False', 'no_print': 'None', 'invocation_command': 'dbt debug', 'printer_width': '80', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'empty': 'None', 'log_cache_events': 'False', 'write_json': 'True', 'version_check': 'True', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/paulmaier/.dbt'}
+[0m16:56:52.654470 [info ] [MainThread]: dbt version: 1.11.7
+[0m16:56:52.654601 [info ] [MainThread]: python version: 3.12.12
+[0m16:56:52.654751 [info ] [MainThread]: python path: /Users/paulmaier/projects/dagster-dbt-learn/.venv/bin/python
+[0m16:56:52.654842 [info ] [MainThread]: os info: macOS-26.4-arm64-arm-64bit
+[0m16:56:52.676596 [info ] [MainThread]: Using profiles dir at /Users/paulmaier/.dbt
+[0m16:56:52.676841 [info ] [MainThread]: Using profiles.yml file at /Users/paulmaier/.dbt/profiles.yml
+[0m16:56:52.676952 [info ] [MainThread]: Using dbt_project.yml file at /Users/paulmaier/projects/dagster-dbt-learn/dbt_project.yml
+[0m16:56:52.677590 [info ] [MainThread]: adapter type: postgres
+[0m16:56:52.677695 [info ] [MainThread]: adapter version: 1.10.0
+[0m16:56:52.677945 [info ] [MainThread]: Configuration:
+[0m16:56:52.678186 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:56:52.678328 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:56:52.678446 [info ] [MainThread]: Required dependencies:
+[0m16:56:52.678597 [debug] [MainThread]: Executing "git --help"
+[0m16:56:52.690618 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:56:52.690993 [debug] [MainThread]: STDERR: "b''"
+[0m16:56:52.691132 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:56:52.691269 [info ] [MainThread]: Connection:
+[0m16:56:52.691410 [info ] [MainThread]:   host: localhost
+[0m16:56:52.691505 [info ] [MainThread]:   port: 5432
+[0m16:56:52.691594 [info ] [MainThread]:   user: postgres
+[0m16:56:52.691682 [info ] [MainThread]:   database: dagster
+[0m16:56:52.691768 [info ] [MainThread]:   schema: dagster
+[0m16:56:52.691857 [info ] [MainThread]:   connect_timeout: 10
+[0m16:56:52.691947 [info ] [MainThread]:   role: None
+[0m16:56:52.692030 [info ] [MainThread]:   search_path: None
+[0m16:56:52.692114 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:56:52.692198 [info ] [MainThread]:   sslmode: None
+[0m16:56:52.692275 [info ] [MainThread]:   sslcert: None
+[0m16:56:52.692354 [info ] [MainThread]:   sslkey: None
+[0m16:56:52.692430 [info ] [MainThread]:   sslrootcert: None
+[0m16:56:52.692509 [info ] [MainThread]:   application_name: dbt
+[0m16:56:52.692584 [info ] [MainThread]:   retries: 1
+[0m16:56:52.692819 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m16:56:52.731605 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:56:52.776075 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:56:52.776240 [debug] [MainThread]: On debug: select 1 as id
+[0m16:56:52.776329 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:56:52.910627 [debug] [MainThread]: SQL status: SELECT 1 in 0.134 seconds
+[0m16:56:52.911204 [debug] [MainThread]: On debug: Close
+[0m16:56:52.911384 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:56:52.911541 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:56:52.911662 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/paulmaier/projects/dagster-dbt-learn/dbt_project.yml> not found
+
+[0m16:56:52.911954 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.29523322, "process_in_blocks": "0", "process_kernel_time": 0.151578, "process_mem_max_rss": "137297920", "process_out_blocks": "0", "process_user_time": 0.591486}
+[0m16:56:52.912178 [debug] [MainThread]: Command `dbt debug` failed at 16:56:52.912131 after 0.30 seconds
+[0m16:56:52.912341 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:56:52.912507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10976b9e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a597b00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a596540>]}
+[0m16:56:52.912696 [debug] [MainThread]: Flushing usage events
+[0m16:56:53.355065 [debug] [MainThread]: An error was encountered while trying to flush usage events
+{"data":{"log_version":3,"version":"=2.0.0-preview.164"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019d688d-4928-7e53-a0c9-66545471bc32","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.164","name":"MainReportVersion","pid":21372,"thread":"tokio-rt-worker","ts":"2026-04-07T15:26:23.032651Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"/Users/paulmaier/.local/bin/dbt license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019d688d-4928-7e53-a0c9-66545471bc32","level":"debug","msg":"running dbt-fusion with argumets {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":21372,"thread":"tokio-rt-worker","ts":"2026-04-07T15:26:23.032671Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019d688d-4928-7e53-a0c9-66545471bc32","level":"debug","msg":"No active cloud project configured, skipping remote license","name":"Generic","pid":21372,"thread":"tokio-rt-worker","ts":"2026-04-07T15:26:23.035487Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019d688d-4928-7e53-a0c9-66545471bc32","level":"info","msg":"{\n  \"status\": \"not_found\",\n  \"licensing_enabled\": true\n}","name":"ShowNode","pid":21372,"thread":"tokio-rt-worker","ts":"2026-04-07T15:26:23.036027Z"}}
+{"data":{"completed_at":"2026-04-07T15:26:23.161817Z","elapsed":0.13099199533462524,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019d688d-4928-7e53-a0c9-66545471bc32","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [130ms]","name":"CommandCompleted","pid":21372,"thread":"tokio-rt-worker","ts":"2026-04-07T15:26:23.162526Z"}}

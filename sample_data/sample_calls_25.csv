@@ -1,0 +1,27 @@
+timestamp,call_id,name,event_type,transcript,company
+2026-04-07T09:02:11Z,call_20260407_090211_001,Emma Carter,call_initiated,"Hello, thank you for calling support. How can I assist you today?",NorthPeak Retail
+2026-04-07T09:02:25Z,call_20260407_090211_001,Liam Brooks,call_answered,"Hi, I need an update on my shipment because the tracking has not changed.",Vertex Home
+2026-04-07T09:03:02Z,call_20260407_090211_001,Emma Carter,information_provided,"I can confirm your package left our warehouse this morning and should arrive tomorrow.",NorthPeak Retail
+2026-04-07T09:03:20Z,call_20260407_090211_001,Liam Brooks,call_ended,"Perfect, thanks for checking that for me.",Vertex Home
+2026-04-07T10:15:44Z,call_20260407_101544_002,Noah Patel,call_initiated,"Good morning, customer care speaking. What can I help you with?",BlueRiver Telecom
+2026-04-07T10:16:01Z,call_20260407_101544_002,Olivia Reed,call_answered,"I was charged twice for the same invoice and I would like a refund.",GreenLine Systems
+2026-04-07T10:16:33Z,call_20260407_101544_002,Noah Patel,information_provided,"I see the duplicate charge and I have submitted a refund request that should process within three business days.",BlueRiver Telecom
+2026-04-07T10:16:49Z,call_20260407_101544_002,Olivia Reed,call_ended,"Thank you for resolving that so quickly.",GreenLine Systems
+2026-04-07T11:28:17Z,call_20260407_112817_003,Mia Chen,call_initiated,"Thanks for contacting us. Could you share your order number?",Sunfield Logistics
+2026-04-07T11:28:40Z,call_20260407_112817_003,Ethan Ross,call_answered,"Sure, the order number is 884213 and I need to change the delivery address.",Atlas Foods
+2026-04-07T11:29:05Z,call_20260407_112817_003,Mia Chen,information_provided,"I have updated the address and sent a confirmation email to you.",Sunfield Logistics
+2026-04-07T11:29:19Z,call_20260407_112817_003,Ethan Ross,call_ended,"Great, I appreciate your help today.",Atlas Foods
+2026-04-07T12:04:09Z,call_20260407_120409_004,Lucas Meyer,call_initiated,"Hello, billing desk here. How may I assist?",Cedar Health
+2026-04-07T12:04:26Z,call_20260407_120409_004,Ava Turner,call_answered,"I want to understand why my plan renewal amount increased this month.",Orchid Labs
+2026-04-07T12:04:58Z,call_20260407_120409_004,Lucas Meyer,information_provided,"Your renewal reflects the annual pricing update published in March and I can email you the full breakdown.",Cedar Health
+2026-04-07T12:05:14Z,call_20260407_120409_004,Ava Turner,call_ended,"Please send that breakdown, thank you.",Orchid Labs
+2026-04-07T13:41:55Z,call_20260407_134155_005,Sophia Nguyen,call_initiated,"Welcome to support, this is Sophia. What issue are you seeing?",Granite Energy
+2026-04-07T13:42:10Z,call_20260407_134155_005,James Cole,call_answered,"Our portal login keeps timing out for several team members.",Harbor Tech
+2026-04-07T13:42:47Z,call_20260407_134155_005,Sophia Nguyen,information_provided,"We are currently rolling out a fix and access should be restored within the next hour.",Granite Energy
+2026-04-07T13:43:03Z,call_20260407_134155_005,James Cole,call_ended,"Understood, we will try again shortly.",Harbor Tech
+2026-04-07T14:12:22Z,call_20260407_141222_006,Daniel Price,call_initiated,"Thank you for calling. How can I support you today?",Pioneer Transit
+2026-04-07T14:12:39Z,call_20260407_141222_006,Chloe Bennett,call_answered,"I need a copy of last month’s statement for accounting.",Summit Interiors
+2026-04-07T14:13:04Z,call_20260407_141222_006,Daniel Price,information_provided,"I have sent the statement PDF to your registered email address.",Pioneer Transit
+2026-04-07T14:13:18Z,call_20260407_141222_006,Chloe Bennett,call_ended,"Received it, thanks for the quick turnaround.",Summit Interiors
+2026-04-07T15:27:31Z,call_20260407_152731_007,Isabella Ford,call_initiated,"Support center, Isabella speaking. What can I help with today?",BrightWave Media
+2026-04-07T15:27:49Z,call_20260407_152731_007,Mason Hill,call_answered,"Hi, I need to update the payment method on our subscription before the next billing date.",Oakridge Studio

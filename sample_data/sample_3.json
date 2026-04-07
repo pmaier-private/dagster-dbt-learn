@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-04-07T16:05:33Z",
+  "call_id": "call_20260407_160533_003",
+  "events": [
+    {
+      "name": "Michael Brown",
+      "event_type": "call_initiated",
+      "transcript": "Hello, our team cannot access the analytics dashboard.",
+      "company": "BluePeak Analytics"
+    },
+    {
+      "name": "Priya Nair",
+      "event_type": "troubleshooting_started",
+      "transcript": "I can help with that. Are you seeing an error code when signing in?",
+      "company": "CloudOps Support"
+    },
+    {
+      "name": "Michael Brown",
+      "event_type": "error_reported",
+      "transcript": "Yes, it says authentication token expired.",
+      "company": "BluePeak Analytics"
+    },
+    {
+      "name": "Priya Nair",
+      "event_type": "resolution_provided",
+      "transcript": "Please clear session cache and re-authenticate; I have also reset your access token.",
+      "company": "CloudOps Support"
+    }
+  ]
+}

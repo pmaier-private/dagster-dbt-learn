@@ -5,9 +5,10 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "awscli-local[ver1]>=0.22.2",
     "boto3>=1.42.83",
     "dagster>=1.12.22",
-    "dagster-aws[emr,s3]>=0.28.22",
+    "dagster-aws>=0.28.22",
     "dagster-dbt>=0.28.22",
     "dagster-webserver>=1.12.22",
     "dbt-core>=1.11.7",
@@ -15,4 +16,5 @@ dependencies = [
     "pandas>=3.0.2",
     "psycopg2-binary>=2.9.11",
     "pyarrow>=23.0.1",
+    "pyyaml>=6.0.3",
 ]

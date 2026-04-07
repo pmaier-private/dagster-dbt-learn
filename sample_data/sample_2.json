@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-04-07T15:12:10Z",
+  "call_id": "call_20260407_151210_002",
+  "events": [
+    {
+      "name": "Emily Carter",
+      "event_type": "call_initiated",
+      "transcript": "Hi, I need help updating the billing address on my account.",
+      "company": "Northwind Retail"
+    },
+    {
+      "name": "David Lee",
+      "event_type": "agent_response",
+      "transcript": "Absolutely, I can help with that. Can you confirm your account email?",
+      "company": "SupportHub"
+    },
+    {
+      "name": "Emily Carter",
+      "event_type": "information_shared",
+      "transcript": "Sure, it's emily.carter@example.com.",
+      "company": "Northwind Retail"
+    },
+    {
+      "name": "David Lee",
+      "event_type": "call_ended",
+      "transcript": "Thanks, the billing address has been updated successfully.",
+      "company": "SupportHub"
+    }
+  ]
+}

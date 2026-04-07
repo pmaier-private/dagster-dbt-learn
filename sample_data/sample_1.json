@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-04-07T14:30:45Z",
+  "call_id": "call_20260407_143045_001",
+  "events": [
+    {
+      "name": "John Smith",
+      "event_type": "call_initiated",
+      "transcript": "Hello, thank you for calling. How can I help you today?",
+      "company": "Acme Corp"
+    },
+    {
+      "name": "Sarah Johnson",
+      "event_type": "call_answered",
+      "transcript": "Hi, I'm calling about my recent order. I wanted to check on the delivery status.",
+      "company": "TechFlow Solutions"
+    },
+    {
+      "name": "John Smith",
+      "event_type": "information_provided",
+      "transcript": "Let me look that up for you. Your order is currently in transit and should arrive by Friday.",
+      "company": "Acme Corp"
+    },
+    {
+      "name": "Sarah Johnson",
+      "event_type": "call_ended",
+      "transcript": "Great, thank you so much for your help!",
+      "company": "TechFlow Solutions"
+    }
+  ]
+}

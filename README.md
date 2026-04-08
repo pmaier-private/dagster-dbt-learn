@@ -18,3 +18,7 @@ A voice call has a transcript and timestamp, id, event type, caller name and com
 ## dagster 
 
 TBD
+
+# TODO
+
+- [] add indices

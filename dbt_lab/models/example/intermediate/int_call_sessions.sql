@@ -56,10 +56,13 @@ select
         from
             (ended_at - started_at)
     ) as duration_seconds,
-    extract(
-        epoch
-        from
-            (ended_at - started_at)
-    ) < 15 as is_hangup
+    case
+        when ended_at is null then false
+        else extract(
+            epoch
+            from
+                (ended_at - started_at)
+        ) < 15
+    end as is_hangup
 from
     pivoted

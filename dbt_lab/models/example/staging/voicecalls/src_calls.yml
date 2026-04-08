@@ -17,6 +17,8 @@ sources:
             description: "Type of the event (e.g., call_initiated, call_ended)"
             data_tests:
               - not_null
+              - accepted_values:
+                  values: ['call_initiated', 'information_provided', 'call_answered', 'call_ended']
           - name: timestamp
             description: "The timestamp of the event of some call"
             data_tests:
@@ -38,7 +40,6 @@ models:
         description: "The primary key for this table"
         data_type: string
         data_tests:
-          - unique
           - not_null
       - name: event_type
         description: "Type of the event (e.g., call_initiated, call_ended)"

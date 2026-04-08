@@ -3,11 +3,54 @@ version: 2
 
 models:
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
+  - name: fct_events
+    description: "A fact table for voice call events"
     columns:
-      - name: id
-        description: "The primary key for this table"
+      - name: call_id
+        description: "Together with timestamp, forms the primary key for this table"
+        data_tests:
+          - not_null
+      - name: timestamp
+        description: "The timestamp of the event"
+        data_tests:
+          - not_null
+      - name: event_type
+        description: "The type of event (e.g., 'call_started', 'call_ended')"
+        data_tests:
+          - not_null
+      - name: name
+        description: "The name of the caller"
+        data_tests:
+          - not_null
+      - name: transcript
+        description: "The transcript of the call"
+      - name: company
+        description: "The company the caller is associated with"
+
+  - name: fct_calls
+    description: "One row per call session with duration and short-call (hangup) flags"
+    columns:
+      - name: call_id
+        description: "Primary key for a call session"
         data_tests:
           - unique
           - not_null
+      - name: started_at
+        description: "Timestamp when the call was initiated"
+        data_tests:
+          - not_null
+      - name: ended_at
+        description: "Timestamp when the call ended"
+        data_tests:
+          - not_null
+      - name: duration_seconds
+        description: "Session duration in seconds"
+        data_tests:
+          - not_null
+      - name: is_hangup
+        description: "True when call duration is shorter than 15 seconds"
+        data_tests:
+          - not_null
+      
+      
+      

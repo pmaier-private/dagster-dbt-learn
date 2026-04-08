@@ -3,8 +3,7 @@ version: 2
 sources:
   - name: raw_voicecalls
     description: "Raw voice calls data source, a single raw table with duplicates."
-    database: dagster
-    schema: public 
+    schema: "{{ var('raw_schema', 'public') }}"
     tables:
       - name: raw_table
         description: "Contains the raw voice calls data, including duplicates."

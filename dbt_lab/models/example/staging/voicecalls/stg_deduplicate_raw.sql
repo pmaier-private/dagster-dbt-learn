@@ -17,7 +17,7 @@ with ranked as (
       partition by call_id, timestamp
       order by call_id, timestamp
     ) as rn
-  from public.raw_table
+  from {{ source('raw_voicecalls', 'raw_table') }}
 )
 select *
 from ranked

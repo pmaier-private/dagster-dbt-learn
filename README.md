@@ -19,6 +19,34 @@ A voice call has a transcript and timestamp, id, event type, caller name and com
 
 TBD
 
+
+# Streamlit dashboard
+
+This project includes a Streamlit dashboard for call-session analytics:
+
+- call lengths per company
+- call lengths per caller
+- hang-ups per company
+
+The app is located at `src/dashboard/app.py`.
+
+Run it with:
+
+```bash
+uv run streamlit run src/dashboard/app.py
+```
+
+Database connection values are read from environment variables (with defaults):
+
+- `DASHBOARD_DB_HOST` (`localhost`)
+- `DASHBOARD_DB_PORT` (`5432`)
+- `DASHBOARD_DB_NAME` (`dagster`)
+- `DASHBOARD_DB_USER` (`postgres`)
+- `DASHBOARD_DB_PASSWORD` (`postgres`)
+- `DASHBOARD_DB_SCHEMA` (`public`)
+- `DASHBOARD_DB_TABLE` (`fct_calls`)
+
+
 # TODO
 
 - [] add indices

@@ -9,19 +9,16 @@
 
 {{ config(materialized='table') }}
 
-with source_data as (
 
-    select 1 as id
-    union all
-    select null as id
-
+with ranked as (
+  select
+    *,
+    row_number() over (
+      partition by call_id, timestamp
+      order by call_id, timestamp
+    ) as rn
+  from public.raw_table
 )
-
 select *
-from source_data
-
-/*
-    Uncomment the line below to remove records with null `id` values
-*/
-
--- where id is not null
+from ranked
+where rn = 1

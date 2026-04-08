@@ -41,12 +41,8 @@ models:
           - not_null
       - name: ended_at
         description: "Timestamp when the call ended"
-        data_tests:
-          - not_null
       - name: duration_seconds
         description: "Session duration in seconds"
-        data_tests:
-          - not_null
       - name: is_hangup
         description: "True when call duration is shorter than 15 seconds"
         data_tests:

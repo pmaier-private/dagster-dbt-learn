@@ -4,7 +4,7 @@ sources:
   - name: raw_voicecalls
     description: "Raw voice calls data source, a single raw table with duplicates."
     database: dagster
-    schema: dagster 
+    schema: public 
     tables:
       - name: raw_table
         description: "Contains the raw voice calls data, including duplicates."
@@ -14,7 +14,6 @@ sources:
             data_type: string
             data_tests:
               - not_null
-              - unique
           - name: event_type
             description: "Type of the event (e.g., call_initiated, call_ended)"
             data_tests:
@@ -38,6 +37,28 @@ models:
     columns:
       - name: call_id
         description: "The primary key for this table"
+        data_type: string
         data_tests:
           - unique
           - not_null
+      - name: event_type
+        description: "Type of the event (e.g., call_initiated, call_ended)"
+        data_type: string
+        data_tests:
+          - not_null
+      - name: timestamp
+        description: "The timestamp of the event of some call"
+        data_type: timestamp
+        data_tests:
+          - not_null
+      - name: name
+        description: "The name of the caller."
+        data_type: string
+        data_tests:
+          - not_null
+      - name: company
+        description: "The company of the caller."
+        data_type: string
+        data_tests:
+          - not_null
+      

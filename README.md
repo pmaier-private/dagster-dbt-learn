@@ -50,3 +50,4 @@ Database connection values are read from environment variables (with defaults):
 # TODO
 
 - [] add indices
+- [] raw data as seed

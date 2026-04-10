@@ -10,6 +10,7 @@ dependencies = [
     "dagster>=1.12.22",
     "dagster-aws>=0.28.22",
     "dagster-dbt>=0.28.22",
+    "dagster-dg-cli>=1.12.22",
     "dagster-webserver>=1.12.22",
     "dbt-core>=1.11.7",
     "dbt-postgres>=1.10.0",

@@ -9,3 +9,6 @@ wheels/
 # Virtual environments
 .venv
 logs/dbt.log
+
+# temporary output files
+temp_out

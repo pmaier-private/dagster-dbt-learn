@@ -1,5 +1,7 @@
 # Python-generated files
 __pycache__/
+.pytest_cache/
+.tmp_dagster*
 *.py[oc]
 build/
 dist/

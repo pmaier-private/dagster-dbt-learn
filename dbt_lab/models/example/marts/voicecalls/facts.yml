@@ -10,6 +10,9 @@ models:
         description: "Together with timestamp, forms the primary key for this table"
         data_tests:
           - not_null
+          - relationships:
+              field: call_id
+              to: ref('fct_calls')
       - name: timestamp
         description: "The timestamp of the event"
         data_tests:

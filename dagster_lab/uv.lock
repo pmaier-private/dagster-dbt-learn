@@ -542,6 +542,7 @@ dependencies = [
     { name = "dagster-dg-cli" },
     { name = "pandas", version = "2.3.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
     { name = "pandas", version = "3.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "pytest" },
 ]
 
 [package.optional-dependencies]
@@ -557,6 +558,7 @@ requires-dist = [
     { name = "dagster-dg-cli", specifier = ">=1.13.0" },
     { name = "dagster-webserver", marker = "extra == 'dev'" },
     { name = "pandas", specifier = ">=2.3.3" },
+    { name = "pytest", specifier = ">=9.0.3" },
     { name = "pytest", marker = "extra == 'dev'" },
 ]
 provides-extras = ["dev"]

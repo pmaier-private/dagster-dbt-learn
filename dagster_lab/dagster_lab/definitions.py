@@ -1,9 +1,7 @@
-from dagster import Definitions, load_assets_from_modules
+from pathlib import Path
 
-from dagster_lab.defs import assets  # noqa: TID252
+from dagster import definitions, load_from_defs_folder
 
-all_assets = load_assets_from_modules([assets])
-
-defs = Definitions(
-    assets=all_assets,
-)
+@definitions
+def defs():
+    return load_from_defs_folder(project_root=Path("."))

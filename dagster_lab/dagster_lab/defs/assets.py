@@ -11,13 +11,13 @@ from localstack_client.patch import enable_local_endpoints
 enable_local_endpoints()
 
 
-@dg.asset
+@dg.asset(group_name="dagster_only")
 def copy_it():
     dg.get_dagster_logger().info(os.getcwd())
     return pd.read_csv("../sample_data/sample_calls_25.csv")
 
 
-@dg.asset
+@dg.asset(group_name="dagster_only")
 def head_it(copy_it: pd.DataFrame) -> pd.DataFrame:
 
     output_path = "../temp_out/sample_calls_25_copy_headed.csv"
@@ -53,8 +53,9 @@ def head_check() -> dg.AssetCheckResult:
 
 @dg.asset(
     name="raw_table",
+    key_prefix=["dagster"],
     group_name="raw",
-    kinds={"postgres"},
+    kinds={"postgres", "dbt"},
     owners=["team:data-eng"],
 )
 def raw_dbt_source():

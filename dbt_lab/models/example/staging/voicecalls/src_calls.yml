@@ -31,6 +31,12 @@ sources:
             description: "The company of the caller."
             data_tests:
               - not_null
+  - name: dagster
+    description: "Dagster-owned upstream assets exposed to dbt for lineage/dependencies."
+    schema: "{{ var('raw_schema', 'public') }}"
+    tables:
+      - name: raw_table
+        description: "The raw data table created by the `raw_dbt_source` asset."
 
 models:
   - name: stg_deduplicate_raw

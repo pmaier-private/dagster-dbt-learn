@@ -8,6 +8,7 @@
 */
 
 {{ config(materialized='table') }}
+-- depends_on: {{ source('dagster', 'raw_table') }}
 
 with source_data as (
   select *

@@ -2,8 +2,13 @@ import dagster as dg
 import pandas as pd
 import os
 import boto3
-import psycopg2
+from sqlalchemy import create_engine
 from io import BytesIO
+
+
+from localstack_client.patch import enable_local_endpoints
+
+enable_local_endpoints()
 
 
 @dg.asset
@@ -46,25 +51,49 @@ def head_check() -> dg.AssetCheckResult:
     )
 
 
-@dg.asset
+@dg.asset(
+    name="raw_table",
+    group_name="raw",
+    kinds={"postgres"},
+    owners=["team:data-eng"],
+)
 def raw_dbt_source():
     """
     Downloads all csv files from an AWS S3 bucket and insert the data into a
     Postgres database.
+
+    The asset contains a simulated bug where it will duplicate the data, which
+    dbt has to handle downstream.
     """
 
     logger = dg.get_dagster_logger()
 
     s3_client = boto3.client("s3")
-    bucket_name = os.getenv("S3_BUCKET_NAME", "default-bucket")
+    bucket_name = "dagster-dbt-raw"
+    table_name = "raw_table"
 
-    conn = psycopg2.connect(
-        host=os.getenv("POSTGRES_HOST", "localhost"),
-        database=os.getenv("POSTGRES_DB", "dagster_db"),
-        user=os.getenv("POSTGRES_USER", "postgres"),
-        password=os.getenv("POSTGRES_PASSWORD", ""),
+    if any(
+        k not in os.environ
+        for k in [
+            "POSTGRES_HOST",
+            "POSTGRES_DB",
+            "POSTGRES_USER",
+            "POSTGRES_PASSWORD",
+        ]
+    ):
+        raise ValueError(
+            "Missing required environment variables for Postgres connection"
+        )
+
+    engine = create_engine(
+        (
+            "postgresql+psycopg2://"
+            f"{os.environ['POSTGRES_USER']}:"
+            f"{os.environ['POSTGRES_PASSWORD']}@"
+            f"{os.environ['POSTGRES_HOST']}/"
+            f"{os.environ['POSTGRES_DB']}"
+        )
     )
-    cursor = conn.cursor()
 
     try:
         response = s3_client.list_objects_v2(Bucket=bucket_name)
@@ -79,12 +108,26 @@ def raw_dbt_source():
             obj = s3_client.get_object(Bucket=bucket_name, Key=csv_file)
             df = pd.read_csv(BytesIO(obj["Body"].read()))
 
-            table_name = csv_file.replace(".csv", "").replace("/", "_")
-            df.to_sql(table_name, conn, if_exists="replace", index=False)
+            df = pd.concat(
+                [df, df]
+            )  # simulated bug: duplicate the data before inserting
+
+            df.to_sql(
+                table_name,
+                con=engine,
+                schema="public",
+                if_exists="replace",
+                index=False,
+            )
             logger.info(f"Inserted {len(df)} rows into {table_name}")
 
-        conn.commit()
         logger.info(f"Successfully processed {len(csv_files)} CSV files")
+        return dg.MaterializeResult(
+            metadata={
+                "num_files": dg.MetadataValue.int(len(csv_files)),
+                "table_name": dg.MetadataValue.text(table_name),
+            },
+            value=1,
+        )
     finally:
-        cursor.close()
-        conn.close()
+        engine.dispose()

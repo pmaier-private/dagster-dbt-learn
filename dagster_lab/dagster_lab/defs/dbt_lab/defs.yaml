@@ -1,0 +1,6 @@
+type: dagster_dbt.DbtProjectComponent
+
+attributes:
+  project: 
+    project_dir: '{{ context.project_root }}/../dbt_lab'
+    profiles_dir: '/Users/paulmaier/.dbt'

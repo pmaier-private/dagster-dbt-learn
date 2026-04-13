@@ -7,7 +7,9 @@ requires-python = ">=3.10,<3.15"
 dependencies = [
     "dagster",
     "dagster-cloud",
+    "dagster-dbt>=0.29.0",
     "dagster-dg-cli>=1.13.0",
+    "dbt-postgres>=1.10.0",
     "pandas>=2.3.3",
     "pytest>=9.0.3",
 ]

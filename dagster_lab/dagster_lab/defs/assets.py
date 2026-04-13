@@ -47,7 +47,7 @@ def head_check() -> dg.AssetCheckResult:
 
 
 @dg.asset
-def s3_to_postgres():
+def raw_dbt_source():
     """
     Downloads all csv files from an AWS S3 bucket and insert the data into a
     Postgres database.

@@ -14,5 +14,7 @@ logs/dbt.log
 
 # temporary output files
 temp_out
+
+# env vars
 dagster_lab/dagster_lab/.env
 .env
